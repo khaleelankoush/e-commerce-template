@@ -1,1 +1,1 @@
-# itmam-task
+# e-commerce-template
