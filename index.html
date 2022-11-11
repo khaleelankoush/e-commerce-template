@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITMAM E-Commerce</title>
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
+  <body>
+    <nav class="top-navbar">
+      <div class="flex-item-left">
+        <a href="mailto:gabooo@mail.com">gabooo@mail.com</a>
+        <a href="tel:+12 345-678-90">+12 345-678-90</a>
+      </div>
+      <div class="flex-item-right">
+        <div class="sub-flex-container">
+          <div class="sub-flex-item-left">
+            <a href="https://www.facebook.com" target="_blank">
+              <img src="assets/images/svg/Facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <img src="assets/images/svg/Twitter.svg" alt="Twitter"
+            /></a>
+            <a href="https://www.google.com" target="_blank">
+              <img src="assets/images/svg/Google.svg" alt="Google" />
+            </a>
+          </div>
+          <div class="sub-flex-item-right">
+            <button onclick="loginHandler()" id="login">Login</button>
+            <button onclick="signupHandler()" id="signup">Register</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="login-modal" class="login-modal">
+      <div class="modal-content">
+        <span onclick="closeLoginModal()" class="close">&times;</span>
+        <form>
+          <h1>Login</h1>
+          <input type="text" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <button class="btn">Log In</button>
+        </form>
+        <div class="signup">
+          <p>Not registered?</p>
+          <button class="signup-btn" onclick="signupHandler()">
+            Create an Account.
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup-modal" class="signup-modal">
+      <div class="modal-content">
+        <span onclick="closeSignupModal()" class="close">&times;</span>
+        <form>
+          <h1>Signup</h1>
+          <input type="text" placeholder="Full Name" required />
+          <input type="text" placeholder="Email" required />
+          <input type="text" placeholder="Phone Number" required />
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Verify Password"
+            id="password2"
+            required
+          />
+          <button class="btn" id="signup-btn" onclick="validate()">
+            Signup
+          </button>
+        </form>
+        <div class="login">
+          <p>Already have an account?</p>
+          <button class="login-btn" onclick="loginHandler()">login</button>
+        </div>
+      </div>
+    </section>
+
+    <header class="navbar flex-container">
+      <ul>
+        <a href="#"><li>Woman</li></a>
+        <a href="#"><li>Men</li></a>
+        <a href="#"><li>Children</li></a>
+        <a href="#"><li>Collection</li></a>
+        <a href="index.html" class="logo"><li>gabooo</li></a>
+        <a href="#"><li>Spring</li></a>
+        <a href="#"><li>Summer</li></a>
+        <a href="#"><li>Fall</li></a>
+        <a href="#"><li>Winter</li></a>
+      </ul>
+    </header>
+
+    <header class="main-header flex-container">
+      <div class="row">
+        <div class="left-box">
+          <h1>FASHION THAT LIKES TO SAY YES</h1>
+          <p>
+            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
+            dui. Vivamus suscipit tortor eget felis porttitor volutpat.
+          </p>
+          <button class="btn">Shop Now</button>
+        </div>
+        <div class="right-box"></div>
+      </div>
+    </header>
+
+    <header id="bottom-navbar">
+      <div class="left-nav">
+        <img src="assets/images/Flag.png" alt="Flag" class="flag-icon" />
+        <select name="lang" id="lang">
+          <option value="english">EN</option>
+          <option value="arabic">AR</option>
+        </select>
+        <span class="caret-arrow"></span>
+
+        <select name="currency" id="currency">
+          <option value="dollar">USD</option>
+          <option value="dinar">JOD</option>
+        </select>
+      </div>
+      <div class="right-nav">
+        <div class="right-nav-1">
+          <ul>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">WishList (7)</a></li>
+            <li><a href="#">Checkout</a></li>
+            <li><a href="#">My Account</a></li>
+          </ul>
+        </div>
+        <div class="right-nav-2">
+          <div class="search">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search"
+            />
+            <img
+              class="search-icon"
+              src="assets/images/svg/Search-Icon.svg"
+              alt="search"
+            />
+          </div>
+
+          <div class="cart">
+            <img
+              class="cart-icon"
+              src="assets/images/svg/Cart-Icon.svg"
+              alt="cart"
+            />
+            <span class="amount">$79.00</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="popular-now">
+      <div class="row">
+        <h1 class="popular-title">Popular Now</h1>
+      </div>
+      <div class="row categories">
+        <a href="#" class="category-item">Trending</a>
+        <a href="#" class="category-item">Bestsellers</a>
+        <a href="#" class="category-item">New</a>
+        <a href="#" class="category-item">On Sale</a>
+      </div>
+      <div class="row items">
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <p class="item-name">Paris Jacket</p>
+          <span class="item-price">$89.99</span>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <p class="item-name">Paris Jacket</p>
+          <span class="item-price">$89.99</span>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <p class="item-name">Paris Jacket</p>
+          <span class="item-price">$89.99</span>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <p class="item-name">Paris Jacket</p>
+          <span class="item-price">$89.99</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="collection">
+      <div class="row">
+        <h1 class="collection-title">New Winter Collection</h1>
+
+        <p class="collection-description">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+          Vivamus suscipit tortor eget felis porttitor volutpat.
+        </p>
+
+        <button class="btn">All Collection</button>
+      </div>
+      <div class="row items">
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <div class="item-details">
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </div>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <div class="item-details">
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </div>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <div class="item-details">
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </div>
+        </a>
+
+        <a href="item.html" class="item">
+          <div class="item-img"></div>
+          <div class="item-details">
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="sale">
+      <div class="row">
+        <h2 class="sale-title">Season Sale</h2>
+        <h1 class="sale-amount">Up to 70% Off</h1>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="row">
+        <span class="newsletter-text">Subscribe to Newsletter: </span>
+        <input type="search" id="newsletter-search" placeholder="Your Mail" />
+        <button class="btn">Subscribe</button>
+      </div>
+    </section>
+
+    <section id="from-collection">
+      <h1 class="from-collection-title">From Our Collection</h1>
+      <div class="row">
+        <div class="part-1">
+          <div class="collection-details">
+            <p class="from-collection-description">
+              Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+              lacinia eget consectetur sed, convallis at tellus.
+            </p>
+          </div>
+        </div>
+
+        <div class="part-2">
+          <div class="categories">
+            <button class="btn">Winter</button>
+            <button class="btn">Spring</button>
+            <button class="btn">Summer</button>
+            <button class="btn">Fall</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="items-collection">
+        <div class="row items">
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html">
+            <div class="item">
+              <div class="item-img"></div>
+              <p class="item-name">Paris Jacket</p>
+              <span class="item-price">$89.99</span>
+            </div>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+
+          <a href="item.html" class="item">
+            <div class="item-img"></div>
+            <p class="item-name">Paris Jacket</p>
+            <span class="item-price">$89.99</span>
+          </a>
+        </div>
+      </div>
+      <div class="row show-more">
+        <button class="btn">Show Me More</button>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="left-box">
+        <div class="story-img"></div>
+      </div>
+      <div class="right-box">
+        <h2 class="story-title">Story Behind</h2>
+        <span class="logo">gabooo</span>
+        <p class="story-paragraph">
+          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.
+          Vivamus suscipit tortor eget felis porttitor volutpat. Accumsan id
+          imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam
+          vehisuscipit tortor eget felis.
+        </p>
+        <button class="btn">Contact Us</button>
+      </div>
+    </section>
+
+    <footer>
+      <div class="column-1">
+        <span class="logo">gabooo</span>
+        <p class="footer-paragraph">
+          Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo,
+          lacinia eget consectetur sed, convallis at tellus.
+        </p>
+        <span class="copyright-1"
+          >Created by Khaleel Ankoush,Amman - Jordan</span
+        >
+        <span class="copyright-2">
+          © 2022 - <span class="copyright-logo">Gabooo</span>.Inc</span
+        >
+      </div>
+      <div class="column-2">
+        <span class="column-title">Links</span>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sign In</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+      </div>
+      <div class="column-3">
+        <span class="column-title">Shopping</span>
+        <li><a href="#">Shopping Cart</a></li>
+        <li><a href="#">Winter</a></li>
+        <li><a href="#">Spring</a></li>
+        <li><a href="#">Summer</a></li>
+        <li><a href="#">Fall</a></li>
+        <li><a href="#">Collection</a></li>
+      </div>
+      <div class="column-4">
+        <span class="column-title">Contact Us</span>
+        <p class="contact-text">
+          Get in touch with us via mail phone.We are waiting for your call or
+          message
+        </p>
+        <a href="mailto:graphberry@gmail.com" class="btn"
+          >graphberry@gmail.com</a
+        >
+        <div class="social-icons">
+          <ul>
+            <li class="social-icon">
+              <a href="https://www.facebook.com" target="_blank">
+                <img src="assets/images/svg/Facebook-lg.svg" alt="Facebook" />
+              </a>
+            </li>
+
+            <li class="social-icon">
+              <a href="https://twitter.com" target="_blank">
+                <img src="assets/images/svg/Twitter-lg.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li class="social-icon">
+              <a href="https://www.google.com" target="_blank">
+                <img src="assets/images/svg/Google-lg.svg" alt="Google" />
+              </a>
+            </li>
+            <li class="social-icon">
+              <a href="https://www.dribble.com" target="_blank">
+                <img src="assets/images/svg/Dribble-lg.svg" alt="Dribble" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>

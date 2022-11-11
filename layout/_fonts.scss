@@ -1,0 +1,130 @@
+/// Fonts
+@mixin Montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  @mixin Montserrat-Thin {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Thin.ttf');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-ThinItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-ThinItalic.ttf');
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-ExtraLight {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-ExtraLight.ttf');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-ExtraLightItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-ExtraLightItalic.ttf');
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-Light {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-LightItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-Regular {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-Italic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Italic.ttf');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-Medium {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-MediumItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-MediumItalic.ttf');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-SemiBold {
+    @include Montserrat;
+    src: url(../assets/fonts/Montserrat-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-SemiBoldItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-SemiBoldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-Bold {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-BoldItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-BlackItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-ExtraBold {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-ExtraBoldItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  @mixin Montserrat-Black {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @mixin Montserrat-BlackItalic {
+    @include Montserrat;
+    src: url('../assets/fonts/Montserrat-BlackItalic.ttf');
+    font-weight: 900;
+    font-style: italic;
+  }
