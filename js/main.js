@@ -72,3 +72,35 @@ document.addEventListener('click', (event) => {
 });
 
 /* End Menu */
+
+/* Start Accordion */
+
+const headers = document.querySelectorAll('.accordion-header');
+headers.forEach((header) => {
+  const sign = document.createElement('span');
+  sign.innerHTML = ' +';
+  header.appendChild(sign);
+  header.addEventListener('click', function () {
+    const content = this.nextElementSibling;
+    headers.forEach((header) => {
+      if (header !== this) {
+        header.nextElementSibling.classList.remove('open');
+        header.querySelector('span').innerHTML = ' +';
+        requestAnimationFrame(() => {
+          header.nextElementSibling.style.maxHeight = null;
+        });
+      }
+    });
+    content.classList.toggle('open');
+    sign.innerHTML = content.classList.contains('open') ? ' -' : ' +';
+    if (content.classList.contains('open')) {
+      requestAnimationFrame(() => {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      });
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});
+
+/* End Accordion */
