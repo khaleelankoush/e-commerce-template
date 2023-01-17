@@ -1,3 +1,5 @@
+/* Start Modal */
+
 var loginModal = document.getElementById('login-modal');
 var signupModal = document.getElementById('signup-modal');
 
@@ -44,3 +46,29 @@ window.onclick = function (event) {
     signupModal.style.display = 'none';
   }
 };
+
+/* End Modal */
+
+/* Start Menu */
+
+const menu = document.querySelector('.menu');
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  menu.classList.toggle('open');
+});
+
+navLinks.addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    menu.classList.remove('open');
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('.menu')) {
+    menu.classList.remove('open');
+  }
+});
+
+/* End Menu */
