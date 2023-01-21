@@ -1,10 +1,10 @@
-@import "../layout/reset";
-@import "../layout/fonts";
-@import "../layout/colors";
-@import "../layout/utilites";
+@import '../layout/reset';
+@import '../layout/fonts';
+@import '../layout/colors';
+@import '../layout/utilites';
 
 * {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   // font-style: italic;
 }
@@ -161,14 +161,17 @@
     .menu {
       position: relative;
       .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 30px;
         height: 4px;
         background-color: #333;
-        margin: 6px 0;
+        margin: 6px auto;
         transition: all 0.3s ease;
         &::before,
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 30px;
           height: 4px;
@@ -272,7 +275,7 @@
     min-height: 500px;
     width: 100%;
     background-color: $light-bg-color-3;
-    background-image: url("../assets/images/header-image.jpg");
+    background-image: url('../assets/images/header-image.jpg');
     background-size: cover;
   }
 }
@@ -516,7 +519,7 @@
         width: 270px;
         height: 320px;
         background-color: $light-bg-color-3;
-        background-image: url("../assets/images/item-img.jpg");
+        background-image: url('../assets/images/item-img.jpg');
         background-size: cover;
       }
       .item-name {
@@ -583,7 +586,7 @@
         width: 270px;
         height: 200px;
         background-color: $light-bg-color-3;
-        background-image: url("../assets/images/item-img.jpg");
+        background-image: url('../assets/images/item-img.jpg');
         background-size: cover;
       }
       .item-details {
@@ -766,7 +769,7 @@
           width: 270px;
           height: 320px;
           background-color: $light-bg-color-3;
-          background-image: url("../assets/images/item-img.jpg");
+          background-image: url('../assets/images/item-img.jpg');
           background-size: cover;
         }
         .item-name {
@@ -836,7 +839,7 @@
     background-color: $light-bg-color-3;
     height: auto;
     min-height: 500px;
-    background-image: url("../assets/images/story-img.jpg");
+    background-image: url('../assets/images/story-img.jpg');
     background-size: cover;
   }
   .right-box {
@@ -1247,7 +1250,7 @@ footer {
         font-size: 20px;
         margin: 1.5rem 0;
         &::after {
-          content: "";
+          content: '';
           display: block;
           border-top: 1px solid $light-bg-color-3;
           width: 100%;

@@ -353,10 +353,13 @@ display:revert; revert to element instead of attribute */
     position: relative;
   }
   .navbar .menu .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30px;
     height: 4px;
     background-color: #333;
-    margin: 6px 0;
+    margin: 6px auto;
     transition: all 0.3s ease;
   }
   .navbar .menu .burger::before, .navbar .menu .burger::after {
